@@ -37,6 +37,8 @@ public class POM_BlueBirdLoginPage extends SeleniumHelper{
 		wait = new WebDriverWait(driver, 5);
 	}
 
+	
+	
    //Locators
 	By UserName = By.xpath("//input[@id='UserName']");
 	By Password_Field = By.xpath("//input[@id='Password']");
