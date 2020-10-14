@@ -18,6 +18,9 @@ public class HomePage {
 	@FindBy(name="password") WebElement pword;
 	@FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[3]/span[1]") WebElement UserNameDisplayed;
 	
+	
+	
+	
 	public void VerifyUserName(String userName) {
 		String unameDisplayed = UserNameDisplayed.getText();
 		Assert.assertEquals(unameDisplayed, userName);
