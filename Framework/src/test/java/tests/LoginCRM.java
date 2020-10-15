@@ -20,6 +20,7 @@ public class LoginCRM extends BaseClass{
 		Reporter.log("Reporter - Login to CRM",true);
 		// Navigating To
 		driver.get(urlToBeTested);
+		//driver.get(configdata.getStagingUrl());
 		
 		IndexPage indexpage = PageFactory.initElements(driver, IndexPage.class);
 		Helper.captureScreenshot(driver,"IndexPage");

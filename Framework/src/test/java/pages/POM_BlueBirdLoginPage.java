@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import utility.Helper;
 import utility.SeleniumHelper;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -35,6 +36,7 @@ public class POM_BlueBirdLoginPage extends SeleniumHelper{
 		this.logger = Inlogger;
 		logger.info("Page Title: " +driver.getTitle());
 		wait = new WebDriverWait(driver, 5);
+		Helper.captureScreenshot(driver, "POM_BlueBirdLoginPage");
 	}
 
 	
@@ -151,13 +153,26 @@ public class POM_BlueBirdLoginPage extends SeleniumHelper{
 	    action.moveToElement(we).build().perform();
 	}
 	public void LogIn_Button_MOVETOANDCLICK(){
+		logger.info("inside LogIn_Button_MOVETOANDCLICK  -- BEFORE");
+		if(driver == null) {
+			logger.info("driver == null");
+		}
+		if(logger == null) {
+			logger.info("logger == null");
+		}
+		if(LogIn_Button == null) {
+			logger.info("LogIn_Button == null");
+		}
 	    Element_Click(driver,logger,LogIn_Button, "moveToAndClick","LogIn_Button");
+	    logger.info("inside LogIn_Button_MOVETOANDCLICK -- AFTER");
  	}
 	public void LogIn_Button_CLICK_JAVASCRIPT(){
 	    Element_Click(driver,logger,LogIn_Button, "javaClick","LogIn_Button");
   	}
 	public void LogIn_Button_CLICK(){
+		logger.info("inside LogIn_Button_CLICK  -- BEFORE");
 	    Element_Click(driver,logger,LogIn_Button, "click","LogIn_Button");
+	    logger.info("inside LogIn_Button_CLICK -- AFTER");
   
 	}
 	public String LogIn_Button_GETTEXT(){

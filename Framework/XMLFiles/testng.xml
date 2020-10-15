@@ -3,7 +3,9 @@
 <suite name="Suite">
   <test  name="Test">
     <classes>
-      <class name="tests.LoginCRM"/>           
+      <class name="tests.LoginSmoke_TEST_TestNG_Chrome"/> 
+      <class name="tests.LoginCRM"/>  
+      <class name="tests.ValidateBBPages_TEST_TestNG_Chrome"/>              
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

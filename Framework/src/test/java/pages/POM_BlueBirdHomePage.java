@@ -8,15 +8,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import utility.Helper;
 import utility.SeleniumHelper;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.ElementNotSelectableException;
-import org.openqa.selenium.ElementNotVisibleException;
+
 
 public class POM_BlueBirdHomePage extends SeleniumHelper{
 
@@ -35,6 +32,7 @@ public class POM_BlueBirdHomePage extends SeleniumHelper{
 		this.logger = Inlogger;
 		logger.info("Page Title: " +driver.getTitle());
 		wait = new WebDriverWait(driver, 5);
+		Helper.captureScreenshot(driver, "POM_BlueBirdHomePage");
 	}
 
    //Locators
@@ -74,15 +72,18 @@ public class POM_BlueBirdHomePage extends SeleniumHelper{
 
    // Pay_Transfer
 	public boolean Pay_Transfer_DISPLAYED(){
+		logger.info("Pay_Transfer_DISPLAYED");
 	    return VerifyElement(driver,logger,Pay_Transfer,"displayed","Pay_Transfer");
 	}
 	public boolean Pay_Transfer_ENABLED(){
 	    return VerifyElement(driver,logger,Pay_Transfer,"enabled","Pay_Transfer");
 	}
 	public void Pay_Transfer_MOUSEOVER(){
+		logger.info("Pay_Transfer_MOUSEOVER start");
 	    action = new Actions(driver);
 	    WebElement we = driver.findElement(Pay_Transfer);
-	    action.moveToElement(we).build().perform();
+	    action.moveToElement(we).build().perform();	    
+	    logger.info("Pay_Transfer_MOUSEOVER finish");
 	}
 	public void Pay_Transfer_MOVETOANDCLICK(){
 	    Element_Click(driver,logger,Pay_Transfer, "moveToAndClick","Pay_Transfer");
@@ -173,7 +174,8 @@ public class POM_BlueBirdHomePage extends SeleniumHelper{
   
 	}
 	public String Add_Funds_GETTEXT(){
-	    return driver.findElement(Add_Funds).getText();
+		logger.info("Add_Funds_GETTEXT inside");
+	    return driver.findElement(Add_Funds).getText();	   
 	}
 
    // Direct_Deposit

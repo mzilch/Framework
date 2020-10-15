@@ -72,35 +72,35 @@ public class SeleniumHelper{
 	    }
 	    catch (TimeoutException e)
 	    {
-	        System.out.println("FAILED - " + eleName + " Wait for element has timed out XPath Failed: ");
+	    	logger.info("FAILED - " + eleName + " Wait for element has timed out XPath Failed: ");
 	        System.out.println("'TimeOut' Exception - WebDriver Waited and couldn’t locate the element");
 	        System.out.println(e.getMessage());
 	        return false;
 	    }
 	    catch (NoSuchElementException e1)
 	    {
-	        System.out.println("FAILED - " + eleName + " element is NOT Displayed XPath Failed: ");
+	    	logger.info("FAILED - " + eleName + " element is NOT Displayed XPath Failed: ");
 	        System.out.println("'NoSuchElementException' Exception - WebDriver couldn’t locate the element");
 	        System.out.println(e1.getMessage());
 	        return false;
 	    }
 	    catch (ElementNotVisibleException e2)
 	    {
-	        System.out.println("FAILED - " + eleName + " element is NOT Visible in the DOM XPath Found element: ");
+	    	logger.info("FAILED - " + eleName + " element is NOT Visible in the DOM XPath Found element: ");
 	        System.out.println("'ElementNotVisibleException' Exception - Element present in the DOM but Not Visisble. May be hidden");
 	        System.out.println(e2.getMessage());
 	        return false;
 	    }
 	    catch (ElementNotSelectableException e3)
 	    {
-	        System.out.println("FAILED - " + eleName + " element is NOT Selectable XPath Found element: ");
+	    	logger.info("FAILED - " + eleName + " element is NOT Selectable XPath Found element: ");
 	        System.out.println("'ElementNotSelectableException' Exception - Element present in the DOM but not selectable");
 	        System.out.println(e3.getMessage());
 	        return false;
 	    }
 	    catch (StaleElementReferenceException e4)
 	    {
-	        System.out.println("WARNING - " + eleName + " element is stale XPath Found element: ");
+	    	logger.info("WARNING - " + eleName + " element is stale XPath Found element: ");
 	        System.out.println("'ElementNotSelectableException' Exception - Element is no longer present on the DOM page");
 	        System.out.println(e4.getMessage());
 	        return false;
@@ -110,6 +110,7 @@ public class SeleniumHelper{
 	public void Element_Click(WebDriver Indriver,  ExtentTest InLogger, By InByLocator, String Click_How, String eleName)
 	{
 		this.driver = Indriver;
+		this.logger = InLogger;
 		int int_ClickTyper = 0;
 		if(Click_How == "click") {
 			int_ClickTyper = 1;
@@ -144,31 +145,31 @@ public class SeleniumHelper{
 	    }
 	    catch (TimeoutException e)
 	    {
-	        System.out.println("FAILED - " + eleName + " Wait for element has timed out XPath Failed: ");
+	    	logger.info("FAILED - " + eleName + " Wait for element has timed out XPath Failed: ");
 	        System.out.println("'TimeOut' Exception - WebDriver Waited and couldn’t locate the element");
 	        System.out.println(e.getMessage());
 	    }
 	    catch (NoSuchElementException e1)
 	    {
-	        System.out.println("FAILED - " + eleName + " element is NOT Displayed XPath Failed: ");
+	    	logger.info("FAILED - " + eleName + " element is NOT Displayed XPath Failed: ");
 	        System.out.println("'NoSuchElementException' Exception - WebDriver couldn’t locate the element");
 	        System.out.println(e1.getMessage());
 	    }
 	    catch (ElementNotVisibleException e2)
 	    {
-	        System.out.println("FAILED - " + eleName + " element is NOT Visible in the DOM XPath Found element: ");
+	    	logger.info("FAILED - " + eleName + " element is NOT Visible in the DOM XPath Found element: ");
 	        System.out.println("'ElementNotVisibleException' Exception - Element present in the DOM but Not Visisble. May be hidden");
 	        System.out.println(e2.getMessage());
 	    }
 	    catch (ElementNotSelectableException e3)
 	    {
-	        System.out.println("FAILED - " + eleName + " element is NOT Selectable XPath Found element: ");
+	    	logger.info("FAILED - " + eleName + " element is NOT Selectable XPath Found element: ");
 	        System.out.println("'ElementNotSelectableException' Exception - Element present in the DOM but not selectable");
 	        System.out.println(e3.getMessage());
 	    }
 	    catch (StaleElementReferenceException e4)
 	    {
-	        System.out.println("WARNING - " + eleName + " element is stale XPath Found element: ");
+	    	logger.info("WARNING - " + eleName + " element is stale XPath Found element: ");
 	        System.out.println("'ElementNotSelectableException' Exception - Element is no longer present on the DOM page");
 	        System.out.println(e4.getMessage());
 	    }

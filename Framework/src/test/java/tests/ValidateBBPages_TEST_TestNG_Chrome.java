@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import pages.BaseClass;
 import pages.POM_BlueBirdHomePage;
 import pages.POM_BlueBirdLoginPage;
+import utility.Helper;
 
 public class ValidateBBPages_TEST_TestNG_Chrome extends BaseClass{
 
@@ -19,8 +20,8 @@ public class ValidateBBPages_TEST_TestNG_Chrome extends BaseClass{
 	@Test()
 	public void ValidateBBPages(){
 		logger = report.createTest("ValidateBBPages");
-		System.out.println("--- Started Test");
-		logger.info("Launching Browser");
+		System.out.println("--- Started Test --- ValidateBBPages");
+		logger.info("Launching Browser for ValidateBBPages test");
 		
 		
 		// Navigating To
@@ -46,6 +47,7 @@ public class ValidateBBPages_TEST_TestNG_Chrome extends BaseClass{
 
 		// Browser Navigation
 		logger.info("Page Title: " +driver.getTitle());
+		Helper.captureScreenshot(driver, "Add_Funds");
 		driver.navigate().back();
 		logger.info("Browser Navigation - BACK");
 		logger.info("Page Title: " +driver.getTitle());
@@ -55,6 +57,7 @@ public class ValidateBBPages_TEST_TestNG_Chrome extends BaseClass{
 
 		// Browser Navigation
 		logger.info("Page Title: " +driver.getTitle());
+		Helper.captureScreenshot(driver, "Direct_Deposit");
 		driver.navigate().back();
 		logger.info("Browser Navigation - BACK");
 		logger.info("Page Title: " +driver.getTitle());
@@ -64,14 +67,14 @@ public class ValidateBBPages_TEST_TestNG_Chrome extends BaseClass{
 
 		// Browser Navigation
 		logger.info("Page Title: " +driver.getTitle());
+		Helper.captureScreenshot(driver, "Pay_a_Bill");
 		driver.navigate().back();
 		logger.info("Browser Navigation - BACK");
 		logger.info("Page Title: " +driver.getTitle());
 
 		Local_POM_BlueBirdHomePage.Pay_Transfer_MOUSEOVER();
-		Local_POM_BlueBirdHomePage.Write_a_Check_DISPLAYED();
-
-		logger.pass("End of Test Steps");
+		Local_POM_BlueBirdHomePage.Write_a_Check_DISPLAYED();		
+		logger.pass("End of Test Steps for ValidateBBPages test");
 	}
 
 	/*
