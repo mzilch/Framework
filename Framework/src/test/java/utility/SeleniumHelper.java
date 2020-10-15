@@ -15,7 +15,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
 
-import pages.BaseClass;
 
 public class SeleniumHelper{
 	
@@ -31,15 +30,22 @@ public class SeleniumHelper{
 		this.driver = Indriver;
 		this.logger = InLogger;
 		wait = new WebDriverWait(driver, 5);
+		int int_VerificationTyper = 0;
+		if(VerificationType == "displayed") {
+			int_VerificationTyper = 1;
+		}
+		if(VerificationType == "enabled") {
+			int_VerificationTyper = 2;
+		}
 		
 	    try
 	    {
 	        WebElement EllyMont = driver.findElement(InByLocator);
 	        wait.until(ExpectedConditions.visibilityOf(EllyMont));
 
-	        switch (VerificationType)
+	        switch (int_VerificationTyper)
 	        {
-	            case "displayed":
+	            case 1:
 	                if (EllyMont.isDisplayed())
 	                {
 	                    logger.pass("PASSED - " + eleName + " element is Displayed");
@@ -50,7 +56,7 @@ public class SeleniumHelper{
 	                	logger.fail("FAILED - " + eleName + " element is NOT Displayed");
 	                    return false;
 	                }
-	            case "enabled":
+	            case 2:
 	                if (EllyMont.isEnabled())
 	                {
 	                	logger.pass("PASSED - " + eleName + " element is Enabled");
@@ -104,21 +110,31 @@ public class SeleniumHelper{
 	public void Element_Click(WebDriver Indriver,  ExtentTest InLogger, By InByLocator, String Click_How, String eleName)
 	{
 		this.driver = Indriver;
+		int int_ClickTyper = 0;
+		if(Click_How == "click") {
+			int_ClickTyper = 1;
+		}
+		if(Click_How == "javaClick") {
+			int_ClickTyper = 2;
+		}
+		if(Click_How == "moveToAndClick") {
+			int_ClickTyper = 3;
+		}
 	    try
 	    {
-	        switch (Click_How)
+	        switch (int_ClickTyper)
 	        {
-	            case "click":
+	            case 1:
 	                driver.findElement(InByLocator).click();
 	                logger.pass("PASSED - " + eleName + " element was Clicked");
 	                break;
-	            case "javaClick":
+	            case 2:
 	                executor = (JavascriptExecutor)driver;
 	                WebElement we = driver.findElement(InByLocator);
 	                executor.executeScript("arguments[0].click(); ", we);
 	                logger.pass("PASSED - " + eleName + " element was javaClicked");
 	                break;
-	            case "moveToAndClick":
+	            case 3:
 	                action = new Actions(driver);
 	                WebElement we1 = driver.findElement(InByLocator);
 	                action.moveToElement(we1).click().build().perform();

@@ -1,15 +1,15 @@
 package tests;
 
 import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-import utility.BrowserFactory;
+
 import pages.BaseClass;
 import pages.POM_BlueBirdHomePage;
 import pages.POM_BlueBirdLoginPage;
 
-public class ValidateBBPages_TEST_TestNG_Chrome extends BaseClass {
+public class ValidateBBPages_TEST_TestNG_Chrome extends BaseClass{
 
-	// WebDriver driver;
 	Actions action;
 	// String driverPath = "C:\\Users\\HPPro600SFFW7P64\\Desktop\\XPath
 	// Assistant\\Selenium WebDrivers\\ChromeDriver Versions\\ChromeDriver_85";
@@ -17,10 +17,11 @@ public class ValidateBBPages_TEST_TestNG_Chrome extends BaseClass {
 	POM_BlueBirdHomePage Local_POM_BlueBirdHomePage;
 
 	@Test()
-	public void ValidateBBPages() throws InterruptedException {
+	public void ValidateBBPages(){
 		logger = report.createTest("ValidateBBPages");
 		System.out.println("--- Started Test");
 		logger.info("Launching Browser");
+		
 		
 		// Navigating To
 		driver.get("https://secure.bluebird.com/login?intlink=us-bluebird-marketing-home-prospectslp-incomm2018-header-login");
