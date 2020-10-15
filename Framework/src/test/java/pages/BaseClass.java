@@ -10,6 +10,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -41,7 +43,8 @@ public class BaseClass {
 		//report.attachReporter(extent);	
 	}
 	
-	  @BeforeClass public void presetup()
+	@Parameters("browser")
+	  @BeforeClass public void presetup(String browser)
 	  { 
 		  Reporter.log("Inside presetup",true);
 			excel = new ExcelDataProvider();
@@ -50,7 +53,8 @@ public class BaseClass {
 			report = new ExtentReports();
 			report.attachReporter(extent);	
 			
-			driver = BrowserFactory.startBrowser(driver, configdata.getBrowser()); 
+			//driver = BrowserFactory.startBrowser(driver, configdata.getBrowser()); 
+			driver = BrowserFactory.startBrowser(driver, browser); 
 	  } 
 	 
 	  
@@ -62,7 +66,7 @@ public class BaseClass {
 			
 	 @AfterMethod public void tearDownMethod(ITestResult result) 
 	 { 
-		 Reporter.log("Inside tearDown",true);
+		 Reporter.log("Inside tearDownMethod",true);
 		 String  pngpath = Helper.captureScreenshot(driver,"LastPage");
 		  if(result.getStatus()==ITestResult.FAILURE) 
 		  { 

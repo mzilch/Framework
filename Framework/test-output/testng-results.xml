@@ -8,36 +8,36 @@
       <![CDATA[Inside presetup]]>
     </line>
     <line>
-      <![CDATA[Inside tearDownMethod]]>
+      <![CDATA[Inside tearDown]]>
     </line>
     <line>
       <![CDATA[Inside tearDown]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="42032" started-at="2020-10-14T18:11:19Z" finished-at="2020-10-14T18:12:01Z">
+  <suite name="Default suite" duration-ms="38127" started-at="2020-10-15T00:53:31Z" finished-at="2020-10-15T00:54:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="42032" started-at="2020-10-14T18:11:19Z" finished-at="2020-10-14T18:12:01Z">
+    <test name="Default test" duration-ms="38127" started-at="2020-10-15T00:53:31Z" finished-at="2020-10-15T00:54:09Z">
       <class name="tests.ValidateBBPages_TEST_TestNG_Chrome">
-        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="setUpSuite" is-config="true" duration-ms="21" started-at="2020-10-14T18:11:19Z" finished-at="2020-10-14T18:11:19Z">
+        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="setUpSuite" is-config="true" duration-ms="27" started-at="2020-10-15T00:53:31Z" finished-at="2020-10-15T00:53:31Z">
           <reporter-output>
             <line>
               <![CDATA[Inside setUpSuite]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method status="PASS" signature="presetup()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="presetup" is-config="true" duration-ms="9233" started-at="2020-10-14T18:11:19Z" finished-at="2020-10-14T18:11:28Z">
+        <test-method status="PASS" signature="presetup()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="presetup" is-config="true" duration-ms="15165" started-at="2020-10-15T00:53:31Z" finished-at="2020-10-15T00:53:46Z">
           <reporter-output>
             <line>
               <![CDATA[Inside presetup]]>
             </line>
           </reporter-output>
         </test-method> <!-- presetup -->
-        <test-method status="PASS" signature="ValidateBBPages()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="ValidateBBPages" duration-ms="30371" started-at="2020-10-14T18:11:28Z" finished-at="2020-10-14T18:11:59Z">
+        <test-method status="PASS" signature="ValidateBBPages()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="ValidateBBPages" duration-ms="20862" started-at="2020-10-15T00:53:46Z" finished-at="2020-10-15T00:54:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateBBPages -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="tearDownMethod" is-config="true" duration-ms="1303" started-at="2020-10-14T18:11:59Z" finished-at="2020-10-14T18:12:00Z">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="tearDownMethod" is-config="true" duration-ms="1205" started-at="2020-10-15T00:54:07Z" finished-at="2020-10-15T00:54:08Z">
           <params>
             <param index="0">
               <value>
@@ -47,11 +47,11 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[Inside tearDownMethod]]>
+              <![CDATA[Inside tearDown]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="tearDown" is-config="true" duration-ms="1082" started-at="2020-10-14T18:12:00Z" finished-at="2020-10-14T18:12:01Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="tearDown" is-config="true" duration-ms="854" started-at="2020-10-15T00:54:08Z" finished-at="2020-10-15T00:54:09Z">
           <reporter-output>
             <line>
               <![CDATA[Inside tearDown]]>
