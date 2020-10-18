@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="BlueBird Tests">
+		<classes>
+			<class name="tests.ValidateProductServicesLearning_TEST_MavenTestNG_Chrome" />
+			<class name="tests.ValidateBBPages_TEST_MavenTestNG" />
+			<class name="tests.LoginSmoke_TEST_MavenTestNG" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
