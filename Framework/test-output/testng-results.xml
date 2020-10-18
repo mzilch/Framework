@@ -1,64 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
     <line>
       <![CDATA[Inside setUpSuite]]>
     </line>
-    <line>
-      <![CDATA[Inside presetup]]>
-    </line>
-    <line>
-      <![CDATA[Inside tearDown]]>
-    </line>
-    <line>
-      <![CDATA[Inside tearDown]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38127" started-at="2020-10-15T00:53:31Z" finished-at="2020-10-15T00:54:09Z">
+  <suite name="Default suite" duration-ms="61" started-at="2020-10-15T19:06:59Z" finished-at="2020-10-15T19:06:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38127" started-at="2020-10-15T00:53:31Z" finished-at="2020-10-15T00:54:09Z">
-      <class name="tests.ValidateBBPages_TEST_TestNG_Chrome">
-        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="setUpSuite" is-config="true" duration-ms="27" started-at="2020-10-15T00:53:31Z" finished-at="2020-10-15T00:53:31Z">
+    <test name="Default test" duration-ms="61" started-at="2020-10-15T19:06:59Z" finished-at="2020-10-15T19:06:59Z">
+      <class name="tests.LoginSettingsvalidations_TEST_MavenTestNG">
+        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:tests.LoginSettingsvalidations_TEST_MavenTestNG@66a3ffec]" name="setUpSuite" is-config="true" duration-ms="67" started-at="2020-10-15T19:06:59Z" finished-at="2020-10-15T19:06:59Z">
           <reporter-output>
             <line>
               <![CDATA[Inside setUpSuite]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method status="PASS" signature="presetup()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="presetup" is-config="true" duration-ms="15165" started-at="2020-10-15T00:53:31Z" finished-at="2020-10-15T00:53:46Z">
+        <test-method status="FAIL" signature="presetup(java.lang.String)[pri:0, instance:tests.LoginSettingsvalidations_TEST_MavenTestNG@66a3ffec]" name="presetup" is-config="true" duration-ms="0" started-at="2020-10-15T19:06:59Z" finished-at="2020-10-15T19:06:59Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated presetup.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated presetup.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+at org.testng.internal.Parameters.createParameters(Parameters.java:635)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
-            <line>
-              <![CDATA[Inside presetup]]>
-            </line>
           </reporter-output>
         </test-method> <!-- presetup -->
-        <test-method status="PASS" signature="ValidateBBPages()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="ValidateBBPages" duration-ms="20862" started-at="2020-10-15T00:53:46Z" finished-at="2020-10-15T00:54:07Z">
+        <test-method status="SKIP" signature="LoginSettingsvalidations()[pri:0, instance:tests.LoginSettingsvalidations_TEST_MavenTestNG@66a3ffec]" name="LoginSettingsvalidations" duration-ms="0" started-at="2020-10-15T19:06:59Z" finished-at="2020-10-15T19:06:59Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated presetup.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated presetup.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+at org.testng.internal.Parameters.createParameters(Parameters.java:635)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateBBPages -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="tearDownMethod" is-config="true" duration-ms="1205" started-at="2020-10-15T00:54:07Z" finished-at="2020-10-15T00:54:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ValidateBBPages status=SUCCESS method=ValidateBBPages_TEST_TestNG_Chrome.ValidateBBPages()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- LoginSettingsvalidations -->
+        <test-method status="SKIP" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.LoginSettingsvalidations_TEST_MavenTestNG@66a3ffec]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2020-10-15T19:06:59Z" finished-at="2020-10-15T19:06:59Z">
           <reporter-output>
-            <line>
-              <![CDATA[Inside tearDown]]>
-            </line>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.ValidateBBPages_TEST_TestNG_Chrome@66a3ffec]" name="tearDown" is-config="true" duration-ms="854" started-at="2020-10-15T00:54:08Z" finished-at="2020-10-15T00:54:09Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:tests.LoginSettingsvalidations_TEST_MavenTestNG@66a3ffec]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-15T19:06:59Z" finished-at="2020-10-15T19:06:59Z">
           <reporter-output>
-            <line>
-              <![CDATA[Inside tearDown]]>
-            </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.ValidateBBPages_TEST_TestNG_Chrome -->
+      </class> <!-- tests.LoginSettingsvalidations_TEST_MavenTestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

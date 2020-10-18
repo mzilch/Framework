@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Reporter;
 
 
 
@@ -16,6 +17,7 @@ public class BrowserFactory{
 	
 	public static WebDriver startBrowser(WebDriver driver,String browserName)
 	{
+		Reporter.log("Inside startBrowser",true);
 		
 		if(browserName.equals("Chrome"))
 		{
@@ -50,7 +52,7 @@ public class BrowserFactory{
     	driver.manage().window().maximize();
     	driver.manage().deleteAllCookies();
     	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		
 		
@@ -59,6 +61,8 @@ public class BrowserFactory{
 	
 	public static void quitBrowser(WebDriver driver)
 	{
+		
+		Reporter.log("Inside quitBrowser",true);
 		//bclass.logger.info("driver.quit");
 		driver.quit();
 	}

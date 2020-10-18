@@ -27,7 +27,12 @@ public class Helper {
 		} catch (IOException e) {
 			System.out.println("Unable to capture screenshot\r\n" + e.getMessage());
 		}
-		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return screenshotPath;
 	}
 	

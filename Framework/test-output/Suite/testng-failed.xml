@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.ValidateBBPages_TEST_TestNG_Chrome">
+      <class name="tests.LoginSettingsvalidations_TEST_MavenTestNG">
         <methods>
           <include name="tearDownMethod"/>
+          <include name="LoginSettingsvalidations"/>
           <include name="tearDown"/>
-          <include name="ValidateBBPages"/>
           <include name="setUpSuite"/>
           <include name="presetup"/>
         </methods>
-      </class> <!-- tests.ValidateBBPages_TEST_TestNG_Chrome -->
+      </class> <!-- tests.LoginSettingsvalidations_TEST_MavenTestNG -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

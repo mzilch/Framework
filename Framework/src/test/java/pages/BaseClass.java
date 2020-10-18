@@ -30,31 +30,40 @@ public class BaseClass {
 	public ConfigDataProvider configdata;
 	public ExtentReports report;
 	public ExtentTest logger;
+	private ExtentHtmlReporter extent;
+	
+	
+	/*
+	 * public synchronized static ExtentHtmlReporter getReporter() { if (extent ==
+	 * null) { //Set HTML reporting file location ExtentHtmlReporter extent= new
+	 * ExtentHtmlReporter(new File(System.getProperty("user.dir") +
+	 * "/Reports/FreeCRM_" + Helper.getCurrentDateTime() + ".html")); report = new
+	 * ExtentReports(); report.attachReporter(extent); } return extent; }
+	 */
 	
 	@BeforeSuite
 	public void setUpSuite()
 	{
 		Reporter.log("Inside setUpSuite",true);
-		//excel = new ExcelDataProvider();
-		//configdata = new ConfigDataProvider();		
-		//ExtentSparkReporter extent= new ExtentSparkReporter(new File(System.getProperty("user.dir") + "/Reports/FreeCRM_" + Helper.getCurrentDateTime()  + ".html"));
-		//ExtentHtmlReporter extent= new ExtentHtmlReporter(new File(System.getProperty("user.dir") + "/Reports/FreeCRM_" + Helper.getCurrentDateTime()  + ".html"));
-		//report = new ExtentReports();
-		//report.attachReporter(extent);	
+		
+		excel = new ExcelDataProvider();
+		configdata = new ConfigDataProvider();
+		
+
 	}
 	
-	@Parameters("browser")
-	  @BeforeClass public void presetup(String browser)
+	//@Parameters("browser")
+	  @BeforeClass public void presetup()
 	  { 
 		  Reporter.log("Inside presetup",true);
+	  		ExtentHtmlReporter extent= new ExtentHtmlReporter(new File(System.getProperty("user.dir") + "/Reports/FreeCRM_" + Helper.getCurrentDateTime()  + ".html"));
+	  		report = new ExtentReports();
+	  		report.attachReporter(extent);
+			//WebDriver inDriver = null;
 			excel = new ExcelDataProvider();
 			configdata = new ConfigDataProvider();
-			ExtentHtmlReporter extent= new ExtentHtmlReporter(new File(System.getProperty("user.dir") + "/Reports/FreeCRM_" + Helper.getCurrentDateTime()  + ".html"));
-			report = new ExtentReports();
-			report.attachReporter(extent);	
-			
-			//driver = BrowserFactory.startBrowser(driver, configdata.getBrowser()); 
-			driver = BrowserFactory.startBrowser(driver, browser); 
+			driver = BrowserFactory.startBrowser(driver, configdata.getBrowser()); 
+			//driver = BrowserFactory.startBrowser(driver, browser); 
 	  } 
 	 
 	  
